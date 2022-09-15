@@ -1,0 +1,40 @@
+
+h1 {
+  font-size: 65px;
+  color: orange;
+  font-family: sans-serif;
+}
+
+ul {
+  background-color: blueviolet;
+}
+
+.mudacor {
+  background-color: aquamarine;
+}
+
+p {
+  font-weight: 600; /*outra opção seria o bold*/
+  font-size: 3em; /*X vezes maior em relação ao body*/
+}
+
+body {
+  font-size: 16px;
+}
+
+#amarelo {
+  font-style: italic;
+}
+
+#vermelho {
+  line-height: 50px; /*Coloca espaçamento entre as linhas*/
+  text-align: justify;
+  text-decoration:line-through;
+  background-color: red;
+}
+#amarelo {
+  background-color: yellow;
+}
+#marrom{
+  background-color: brown;
+}
