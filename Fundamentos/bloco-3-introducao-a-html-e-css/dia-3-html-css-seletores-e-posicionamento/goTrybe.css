@@ -26,5 +26,11 @@ li em{
     font-weight:bold
 }
 
- 
+.linguagens li:nth-child(-n+3){ /*n é como se fosse 0*/
+    color: blue;
+}
+.pink{
+    background-color: pink;
+}
+Na listagem de linguagens de programação, faça com que as 3 primeiras da lista possuam cor de fonte azul e, se alguma possuir "java*" no texto, utilize uma cor de fundo rosa.
 
