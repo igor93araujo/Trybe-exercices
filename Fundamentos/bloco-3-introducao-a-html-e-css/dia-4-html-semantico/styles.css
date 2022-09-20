@@ -1,71 +1,91 @@
-body{
-    width: 80%;
-    background-color: rgb(215, 253, 241);
+body {
+    width: 70%;
+    background-color: rgb(197, 246, 253);
     font-size: 30px;
     padding: 30px;
+    border: 1px solid black;
+    margin: auto;
 }
 
-.cabecalho h1{
+
+.cabecalho h1 {
     margin-bottom: 40px;
-    width: 50%;
+    width: 55%;
     float: left;
 }
 
-.navegacao li{
+.navegacao li {
     display: inline-block;
     padding: 5px;
     margin-top: 50px;
 }
 
-.navegacao a{
+.navegacao a {
     list-style: none;
     color: black;
     margin-left: 30px;
 }
 
-.artigo h1{
+.artigo{
+    width: 80%;
+}
+
+.artigo h1 {
     clear: both;
-}
-
-.tit_info_cient{
-    width: 70%;
-    padding-left: 50px;
-}
-
-.infos_cientificas{
-    float: left;
-    width: 40%;
-    margin-top: 30px;
-    padding: 30px;
-}
-
-.tabela{
-    float: right;
-    margin-right: 30%;
-}
-
-.taxonomia{
     text-align: center;
-    border-spacing: 0px;
+    font-size: 60px;
+}
+
+.tit_info_cient {
+    width: 50%;
+    padding-left: 50px;
+    margin-top: 0px ;
+    float: left;
+}
+
+.infos_cientificas {
+    float: left;
+    width: 50%;
+    margin-top: 0px;
+    padding-left: 60px;
+    text-align: justify;
     
 }
-.taxonomia td{
-    border:  1px solid #606060;
+
+.tabela {
+    float: right;
+    margin-right: 10%;
+    margin-top: -70px;
+    
+}
+
+.taxonomia {
+    text-align: center;
+    border-spacing: 0px;
+}
+
+.taxonomia td {
+    border: 2px solid #606060;
     padding: 10px;
     width: 200px;
 }
 
-.caracteristicas{
+.caracteristicas {
     clear: both;
 }
 
-.caracteristicas h2{
+.caracteristicas h2 {
     margin-top: 300px;
     padding: 20px;
 }
 
-.soco{
-    background-color: orange;
+.soco {
     padding-left: 50px;
-    width: 70%;
+    width: 77%;
+    text-align: justify;
+}
+
+.soco img{
+    background-color: red;
+    margin-left:60px;
 }
