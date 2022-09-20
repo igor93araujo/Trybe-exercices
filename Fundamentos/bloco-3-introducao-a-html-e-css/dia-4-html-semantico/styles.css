@@ -1,5 +1,4 @@
 body {
-    width: 70%;
     background-color: rgb(197, 246, 253);
     font-size: 30px;
     padding: 30px;
@@ -10,14 +9,14 @@ body {
 
 .cabecalho h1 {
     margin-bottom: 40px;
-    width: 55%;
+    width: 60%;
     float: left;
 }
 
 .navegacao li {
     display: inline-block;
     padding: 5px;
-    margin-top: 50px;
+    margin-top: 50px;    
 }
 
 .navegacao a {
@@ -91,3 +90,48 @@ body {
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
     margin-left:60px;
 }
+
+.visao img{
+    float: left;
+    margin-left: 60px;
+    margin-top: 50px;
+    border-radius: 5%;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.visao h3{
+    padding-left: 50px;
+}
+
+.visao p{
+    float: right;
+    width: 40%;
+    text-align: justify;
+    margin-right: 300px;
+    margin-top: -10px;    
+}
+
+.anatomia{
+    clear: both;
+}
+
+.anatomia h2{
+    padding-left: 50px;
+}
+
+.anatomia img {
+    float: right;
+    margin-right: 280px;
+    border-radius: 5%;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+ .anatomia p{
+    float: left;
+    width: 40%;
+    margin-left: 50px;
+    text-align: justify;
+ }
+
+ .comportamento{
+    clear: both;
+ }
