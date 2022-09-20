@@ -134,14 +134,15 @@ body {
 
  .comportamento{
     clear: both;
+    width: 80%;
  }
 
  .comportamento p{
     float: right;
     width: 40%;
     text-align: justify;
-    margin-right: 300px;
-    margin-top: 20px;  
+    margin-right: 60px;
+    margin-top: 10px;  
  }
 
  .comportamento img{
@@ -150,3 +151,33 @@ body {
     border-radius: 5%;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
  }
+
+ .referencias{
+    clear: both;    
+ }
+
+ .referencias{
+    width: 60%;
+    text-align: center;
+    margin-top: 400px;
+ }
+
+ .referencias li{
+    text-align: left;
+    text-decoration: none;
+    text-transform: lowercase;
+ }
+
+ aside{
+    display: block;
+    position: absolute;
+    top: 900px;
+    margin-left: 1280px;
+    height: 500px;
+ }
+
+ aside iframe{
+    margin-left: 20px;
+  }
+
+  footer{}
