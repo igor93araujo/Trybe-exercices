@@ -10,14 +10,17 @@ body{
     float: left;
 }
 
-.navegacao ul li{
+.navegacao li{
     display: inline-block;
-    border-bottom: 1px solid black;
     padding: 5px;
-    float:right;
     margin-top: 50px;
-    
 }
+
+.navegacao ul li a{
+    list-style: none;
+    color: black;
+}
+
 .artigo h1{
     clear: both;
 }
