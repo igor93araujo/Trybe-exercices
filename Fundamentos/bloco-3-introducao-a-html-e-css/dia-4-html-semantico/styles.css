@@ -174,14 +174,22 @@ body {
  aside{
     display: block;
     position: absolute;
-    top: 900px;
+    top: 850px;
     margin-left: 1280px;
     height: 500px;
     width: 500px;
  }
 
- aside h2, p{
+ aside h3{
     text-align: center;
+    margin-bottom:20px;
+ }
+
+ aside p{
+    padding: 2px;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 20px;
  }
 
  aside iframe{
