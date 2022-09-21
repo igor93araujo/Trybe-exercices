@@ -13,3 +13,4 @@ switch (status) {
   default:
     console.log('Informação incorreta');
 }
+  
