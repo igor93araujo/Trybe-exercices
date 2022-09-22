@@ -55,3 +55,9 @@ for (let i=0; i<numbers.length; i++){
 let media = soma/quant;
 console.log('A média aritimética é: ' + media);
 
+if (media > 20){
+  console.log('valor maior que 20');
+} else {
+  console.log('valor menor ou igual a 20');
+}
+
