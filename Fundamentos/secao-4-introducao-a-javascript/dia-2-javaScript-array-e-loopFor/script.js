@@ -41,6 +41,7 @@ Utilizando o array que acabou de criar, imprima o resultado da divisão de cada 
 
 let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
 
+
 /* for (let i=0; i<numbers.length; i++){
   console.log(numbers[i]);
 } 
@@ -59,7 +60,7 @@ if (media > 20){
 } else {
   console.log('valor menor ou igual a 20');
 }
- */
+ 
 
 let maior = 0;
 for (let i=0; i<numbers.length; i++){
@@ -68,4 +69,18 @@ for (let i=0; i<numbers.length; i++){
   }
 }
 console.log(maior);
+*/
+
+let quant = 0;
+for (let i=0; i<numbers.length; i++){
+  if(numbers[i] = numbers[i]&2!=0){
+    quant = quant+1;
+  }
+}
+if(quant!=0){
+  console.log(quant);
+} else {
+  console.log("nenhum valor ímpar encontrado");
+}
+
 
