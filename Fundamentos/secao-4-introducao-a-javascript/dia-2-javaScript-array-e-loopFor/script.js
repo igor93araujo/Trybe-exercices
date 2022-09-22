@@ -39,10 +39,11 @@ Utilizando for, crie um array que vá de 1 até 25 e imprima o resultado;
 
 Utilizando o array que acabou de criar, imprima o resultado da divisão de cada um dos elementos por 2. */
 
+/*
 let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
 
 
-/* for (let i=0; i<numbers.length; i++){
+ for (let i=0; i<numbers.length; i++){
   console.log(numbers[i]);
 } 
 let quant=0;
@@ -81,7 +82,7 @@ if(quant!=0){
   console.log(quant);
 } else {
   console.log("nenhum valor ímpar encontrado");
-}*/
+}
 
 let menor=numbers[0];
 
@@ -91,4 +92,11 @@ for (let i=0; i<numbers.length; i++){
   }
 }
 console.log(menor);
+*/
 
+let arr = [];
+
+for (let index = 1; index <= 25; index+=1) {
+  arr.push(index)
+}
+console.log(arr)
