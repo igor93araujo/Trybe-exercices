@@ -99,4 +99,10 @@ let arr = [];
 for (let index = 1; index <= 25; index+=1) {
   arr.push(index)
 }
-console.log(arr)
+
+let divisao = 0;
+
+for (index = 0 ; index < arr.length; index+=1){
+  divisao = arr[index]/2;
+  console.log(divisao);
+}
