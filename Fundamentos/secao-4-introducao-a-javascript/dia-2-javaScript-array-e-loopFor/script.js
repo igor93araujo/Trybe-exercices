@@ -41,7 +41,17 @@ Utilizando o array que acabou de criar, imprima o resultado da divisão de cada 
 
 let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
 
-for (let i=0; i<numbers.length; i++){
+/* for (let i=0; i<numbers.length; i++){
   console.log(numbers[i]);
+} */
+
+let quant=0;
+let soma=0;
+
+for (let i=0; i<numbers.length; i++){
+  quant = quant + 1 ;
+  soma = soma + numbers[i];
 }
+let media = soma/quant;
+console.log('A média aritimética é: ' + media);
 
