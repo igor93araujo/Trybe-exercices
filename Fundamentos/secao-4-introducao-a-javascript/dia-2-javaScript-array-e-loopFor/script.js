@@ -43,8 +43,7 @@ let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
 
 /* for (let i=0; i<numbers.length; i++){
   console.log(numbers[i]);
-} */
-
+} 
 let quant=0;
 let soma=0;
 
@@ -60,4 +59,13 @@ if (media > 20){
 } else {
   console.log('valor menor ou igual a 20');
 }
+ */
+
+let maior = 0;
+for (let i=0; i<numbers.length; i++){
+  if(numbers[i]>maior){
+    maior = numbers [i];
+  }
+}
+console.log(maior);
 
