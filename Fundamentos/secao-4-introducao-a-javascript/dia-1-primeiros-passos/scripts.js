@@ -24,3 +24,35 @@ if (x>y){
 } */
 
 
+/* let piece = "PAWNS";
+
+switch (piece.toLowerCase()) {
+  case "king":
+    console.log("one square in any direction");
+    break;
+  case "queen":
+    console.log("horizontally or vertically any number of squares")
+    break;
+  case "bishop":
+    console.log("diagonally any number of squares");
+    break;
+  case "knights":
+    console.log("two squares in a horizontal or vertical direction, then move one square horizontally or vertically");
+    break;
+  case "pawns":
+    console.log("vertically forward one square, with the option to move two squares if they have not yet moved.");
+    break;
+} */
+
+
+const compra = 2000;
+const venda = 5000;
+
+
+if (compra < 0 || venda < 0) {
+  console.log("Erro! Entre com valor válido!");
+} else {
+  const custo = compra + (compra * 0.2);
+  const lucro = venda - custo;
+  console.log(lucro);
+}
