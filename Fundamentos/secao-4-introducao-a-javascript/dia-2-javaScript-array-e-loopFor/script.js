@@ -62,14 +62,14 @@ if (media > 20){
 }
  
 
-let maior = 0;
+let maior=numbers[0];
 for (let i=0; i<numbers.length; i++){
   if(numbers[i]>maior){
     maior = numbers [i];
   }
 }
 console.log(maior);
-*/
+
 
 let quant = 0;
 for (let i=0; i<numbers.length; i++){
@@ -81,6 +81,14 @@ if(quant!=0){
   console.log(quant);
 } else {
   console.log("nenhum valor ímpar encontrado");
-}
+}*/
 
+let menor=numbers[0];
+
+for (let i=0; i<numbers.length; i++){
+  if(numbers[i]<menor){
+    menor = numbers[i];
+  }
+}
+console.log(menor);
 
