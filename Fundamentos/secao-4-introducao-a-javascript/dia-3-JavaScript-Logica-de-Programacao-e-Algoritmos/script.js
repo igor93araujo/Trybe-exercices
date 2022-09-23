@@ -8,8 +8,8 @@ for (let index = 1; index <= n; index++) {
 
 console.log(numbers);
 
-for (let index = n-1; index>=1; index--) { 
-      fatorial = fatorial * numbers[index];
+for (let index = n; index>0; index-=1) { 
+      fatorial *= index;
 }
 
 console.log("O fatorial é: " + fatorial + ".");
