@@ -9,13 +9,13 @@
 console.log("Bem-vinda, "+ info.personagem); */
 
 //Insira no objeto uma nova propriedade com o nome de chave ‘recorrente’ e o valor ‘Sim’ e, em seguida, imprima o objeto no console.
-
+/* 
 let info = {
   personagem: 'Margarida',
   origem: 'Pato Donald',
   nota: 'Namorada do personagem principal nos quadrinhos do Pato Donald',
   recorrente: 'Sim'
-}
+} */
 
 //Faça um for/in que mostre todas as chaves do objeto.
 /* for (let key in info) {
@@ -41,7 +41,7 @@ for (let key in info) {
 }
  */
 
-let leitor = {
+/* let leitor = {
   nome: 'Julia',
   sobrenome: 'Pessoa',
   idade: 21,
@@ -52,15 +52,15 @@ let leitor = {
       editora: 'Tordesilhas',
     },
   ],
-};
+}; */
 
 //Acesse as chaves nome, sobrenome e titulo, que está dentro da chave livrosFavoritos, e faça um console.log no seguinte formato: “O livro favorito de Julia Pessoa se chama ‘O Pior Dia de Todos’”.
 
   /* console.log("O livro favorito de "+ leitor.nome+ ' '+ leitor.sobrenome+ ' se chama "'  + leitor.livrosFavoritos[0].titulo + '"'); */
 
   //Acesse as chaves nome e livrosFavoritos e faça um console.log no seguinte formato: “Julia tem <quantidade> livros favoritos”, onde “<quantidade>” é um número gerado automaticamente pelo seu código.
-  
-  leitor.livrosFavoritos.push(
+
+/*   leitor.livrosFavoritos.push(
     {
       titulo: 'Harry Potter e o Prisioneiro de Azkaban',
       autor: 'JK Rowling',
@@ -74,4 +74,19 @@ let leitor = {
             quant += 1;
           }
     }
-    console.log(leitor.nome + " tem " + quant + " livros favoritos.");
+    console.log(leitor.nome + " tem " + quant + " livros favoritos."); */
+
+    function verificaPalindromo(palavra){
+
+      let reverse = palavra.split("").reverse().join("");
+
+      if(palavra === reverse){
+        return true;
+      } else {
+        return false;
+      }
+    }
+
+    console.log(verificaPalindromo("banana"));
+
+
