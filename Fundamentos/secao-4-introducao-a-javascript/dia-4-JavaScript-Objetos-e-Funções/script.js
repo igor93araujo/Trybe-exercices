@@ -77,4 +77,25 @@ const b = 20;
 function soma(a,b){
   return a+b;
 }
-console.log(soma(a,b))
+console.log('Adição = ' + soma(a,b))
+
+function subtracao(a,b){
+  return a-b;
+}
+console.log('Subtração = ' + subtracao(a,b));
+
+function multiplicacao(a,b){
+  return a*b;
+}
+console.log('Multiplicação = ' + multiplicacao(a,b));
+
+function divisao(a,b){
+  return a/b;
+}
+console.log('Divisao = ' + divisao(a,b));
+
+function mod(a,b){
+  return a%b;
+}
+console.log('O resto da divisão entre '+a+ ' e '+ b + ' é igual a ' + mod(a,b) + ' .');
+
