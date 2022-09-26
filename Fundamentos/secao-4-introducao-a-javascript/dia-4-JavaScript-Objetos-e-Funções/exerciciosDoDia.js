@@ -76,7 +76,9 @@ for (let key in info) {
     }
     console.log(leitor.nome + " tem " + quant + " livros favoritos."); */
 
-    function verificaPalindromo(palavra){
+
+//Crie uma função que receba uma string e retorne true se for um palíndromo, ou false, se não for.
+/*     function verificaPalindromo(palavra){
 
       let reverse = palavra.split("").reverse().join("");
 
@@ -87,6 +89,19 @@ for (let key in info) {
       }
     }
 
-    console.log(verificaPalindromo("banana"));
+    console.log(verificaPalindromo("banana")); */
 
+  //Crie uma função que receba um array de inteiros e retorne o índice do maior valor.
+
+  function verifyBigger(numbers){
+    let bigger = 0;
+
+    for(let index in numbers){
+      if(numbers[index]>bigger){
+        bigger =index;
+      }
+    }
+    return bigger; // pq por esse return?
+  }
+  console.log(verifyBigger([2, 3, 6, 7, 10, 1]));
 
