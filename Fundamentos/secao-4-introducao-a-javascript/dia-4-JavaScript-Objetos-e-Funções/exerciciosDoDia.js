@@ -150,7 +150,7 @@ Array de teste: [2, 3, 2, 5, 8, 2, 3];.
 
 Valor esperado no retorno da função: 2. */
 
-function maisRepetido(numeros) {
+/* function maisRepetido(numeros) {
   let contRepetido = 0;
   let contNumero = 0;
   let indexNumeroRepetido = 0;
@@ -172,4 +172,21 @@ function maisRepetido(numeros) {
   return numeros[indexNumeroRepetido];
 }
 
-console.log(maisRepetido([2, 3, 2, 5, 8, 2, 3])); // 2
+console.log(maisRepetido([2, 3, 2, 5, 8, 2, 3])); */
+
+
+
+//Crie uma função que receba um número natural (número inteiro não negativo) N e retorne o somatório de todos os números de 1 até N.
+
+function somatorioNaturais(n) {
+  let soma = 0;
+  if (n > 0) {
+    for (let index =1; index<=n;index += 1) {
+      soma += index;
+    }
+  } else {
+    console.log("Número não natural");
+  }
+  return soma;
+}
+console.log(somatorioNaturais(5));
