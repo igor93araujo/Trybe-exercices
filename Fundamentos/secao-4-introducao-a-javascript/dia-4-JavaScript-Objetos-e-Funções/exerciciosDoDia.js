@@ -56,9 +56,9 @@ for (let key in info) {
 
 //Acesse as chaves nome, sobrenome e titulo, que está dentro da chave livrosFavoritos, e faça um console.log no seguinte formato: “O livro favorito de Julia Pessoa se chama ‘O Pior Dia de Todos’”.
 
-  /* console.log("O livro favorito de "+ leitor.nome+ ' '+ leitor.sobrenome+ ' se chama "'  + leitor.livrosFavoritos[0].titulo + '"'); */
+/* console.log("O livro favorito de "+ leitor.nome+ ' '+ leitor.sobrenome+ ' se chama "'  + leitor.livrosFavoritos[0].titulo + '"'); */
 
-  //Acesse as chaves nome e livrosFavoritos e faça um console.log no seguinte formato: “Julia tem <quantidade> livros favoritos”, onde “<quantidade>” é um número gerado automaticamente pelo seu código.
+//Acesse as chaves nome e livrosFavoritos e faça um console.log no seguinte formato: “Julia tem <quantidade> livros favoritos”, onde “<quantidade>” é um número gerado automaticamente pelo seu código.
 
 /*   leitor.livrosFavoritos.push(
     {
@@ -91,7 +91,7 @@ for (let key in info) {
 
     console.log(verificaPalindromo("banana")); */
 
-  //Crie uma função que receba um array de inteiros e retorne o índice do maior valor.
+//Crie uma função que receba um array de inteiros e retorne o índice do maior valor.
 
 /*   function verifyBigger(numbers){
     let bigger = 0;
@@ -110,7 +110,7 @@ for (let key in info) {
 
 Array de teste: [2, 4, 6, 7, 10, 0, -3];. */
 
-function verySmaller(array){
+/* function verySmaller(array){
   let smaller = 0;
 
   for(let index in array){
@@ -121,4 +121,22 @@ function verySmaller(array){
   return smaller;
 }
 
-console.log(verySmaller([2, 4, 6, 7, 10, 0, -3]));
+console.log(verySmaller([2, 4, 6, 7, 10, 0, -3])); */
+
+/* Crie uma função que receba um array de nomes e retorne o nome com a maior quantidade de caracteres.
+
+Array de teste: ['José', 'Lucas', 'Nádia', 'Fernanda', 'Cairo', 'Joana'];. */
+
+function characCounter(arr) {
+
+  let longest="";
+
+  for (let index = 0; index < arr.length; index +=1) {
+    if (arr[index].length > longest.length) {
+      longest = arr[index];
+    }
+  }
+  return longest;
+}
+
+console.log(characCounter(['José', 'Lucas', 'Nádia', 'Fernanda', 'Cairo', 'Joana']));
