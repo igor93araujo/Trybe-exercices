@@ -131,7 +131,7 @@ function comparaTres(a,b,c){
   }
 }
 console.log(comparaTres(a,b,c))
-*/  
+
 
 //Faça um programa que, dado um valor recebido como parâmetro, retorne “positive” se esse valor for positivo, “negative” se for negativo, e caso não seja nem positivo e nem negativo retorne “zero”.
 
@@ -147,3 +147,21 @@ function avalia (value){
   }
 }
 console.log(avalia(value));
+*/  
+
+// Faça um programa que receba três constantes com os valores dos três ângulos internos de um triângulo. Retorne true se os ângulos representarem os ângulos de um triângulo e false, caso contrário. Se algum ângulo for inválido, o programa deve retornar uma mensagem de erro.
+
+const x = 100;
+const y = 30;
+const z = 50;
+
+function angleSum(x,y,z){
+  if (x < 0 || y<0 || z<0){
+    return 'Erro! Número inválido';
+  } else if (x+y+z === 180){
+    return true;
+  } else {
+    return false;
+  }
+}
+ console.log(angleSum(x,y,z))
