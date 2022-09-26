@@ -178,7 +178,7 @@ console.log(maisRepetido([2, 3, 2, 5, 8, 2, 3])); */
 
 //Crie uma função que receba um número natural (número inteiro não negativo) N e retorne o somatório de todos os números de 1 até N.
 
-function somatorioNaturais(n) {
+/* function somatorioNaturais(n) {
   let soma = 0;
   if (n > 0) {
     for (let index =1; index<=n;index += 1) {
@@ -189,4 +189,25 @@ function somatorioNaturais(n) {
   }
   return soma;
 }
-console.log(somatorioNaturais(5));
+console.log(somatorioNaturais(5)); */
+
+
+//Crie uma função que receba uma string word e outra string ending. Verifique se a string ending é o final da string word. Considere que a string ending sempre será menor que a string word.
+
+function wordEnding(word, ending){
+  word = word.split("");
+  ending = ending.split("");
+
+  let verify = true;
+
+  for(index in word){
+    if (word[word.length - ending.length + index] != ending[index]){
+      verify = false;
+    } else {
+      verify = true;
+    }
+  }
+
+  return verify;
+}
+console.log(wordEnding("trybe", "be"));
