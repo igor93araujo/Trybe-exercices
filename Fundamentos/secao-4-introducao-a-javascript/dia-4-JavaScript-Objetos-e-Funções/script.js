@@ -69,6 +69,7 @@ function ligarSeta(sentido){
   }
 }
 
+//Faça cinco programas, um para cada operação aritmética básica. Seu programa deve ter duas constantes, a e b, definidas no começo com os valores que serão operados.
 const a = 5;
 const b = 20;
 
@@ -96,7 +97,8 @@ function mod(a,b){
   return a%b;
 }
 console.log('O resto da divisão entre '+a+ ' e '+ b + ' é igual a ' + mod(a,b) + ' .');
- */
+ 
+//Faça um programa que retorne o maior de dois números. Defina, no começo do programa, duas constantes com os valores que serão comparados.
 
 const x = 1000;
 const y = 1000;
@@ -112,3 +114,36 @@ function comparaNumeros(x,y){
 }
 console.log(comparaNumeros(x,y));
 
+
+//Faça um programa que retorne o maior de três números. Defina, no começo do programa, três constantes com os valores que serão comparados.
+
+const a = 1;
+const b = 2;
+const c = 0;
+
+function comparaTres(a,b,c){
+  if(a>b && a>c){
+    return 'A é o maior numero';
+  } else if (b>a && b>c){
+    return 'B é o maior numero';
+  } else {
+    return 'C é o maior numero';
+  }
+}
+console.log(comparaTres(a,b,c))
+*/  
+
+//Faça um programa que, dado um valor recebido como parâmetro, retorne “positive” se esse valor for positivo, “negative” se for negativo, e caso não seja nem positivo e nem negativo retorne “zero”.
+
+let value = -6;
+
+function avalia (value){
+  if(value<0){
+    return "negative";
+  } else if (value>0){
+    return "positive";
+  } else {
+    return "zero";
+  }
+}
+console.log(avalia(value));
