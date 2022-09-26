@@ -20,9 +20,7 @@ let car = {
 
 for (let key in car) {
   console.log(key + ': ' + car[key])
-} */
-
-//
+}
 
 let statusDoCarro = 'desligado';
 let aceleracao = 0;
@@ -98,4 +96,19 @@ function mod(a,b){
   return a%b;
 }
 console.log('O resto da divisão entre '+a+ ' e '+ b + ' é igual a ' + mod(a,b) + ' .');
+ */
+
+const x = 1000;
+const y = 1000;
+
+function comparaNumeros(x,y){
+  if(x>y){
+    return x + ' é maior que ' + y + ' .';
+  } else if ( y>x){
+    return y + ' é maior que ' + x + ' .';
+  } else {
+    return 'Os números são iguais.'
+  }
+}
+console.log(comparaNumeros(x,y));
 
