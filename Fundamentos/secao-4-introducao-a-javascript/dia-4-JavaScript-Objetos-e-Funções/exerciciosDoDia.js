@@ -93,7 +93,7 @@ for (let key in info) {
 
   //Crie uma função que receba um array de inteiros e retorne o índice do maior valor.
 
-  function verifyBigger(numbers){
+/*   function verifyBigger(numbers){
     let bigger = 0;
 
     for(let index in numbers){
@@ -104,4 +104,21 @@ for (let key in info) {
     return bigger; // pq por esse return?
   }
   console.log(verifyBigger([2, 3, 6, 7, 10, 1]));
+ */
 
+/*   Crie uma função que receba um array de inteiros e retorne o índice do menor valor.
+
+Array de teste: [2, 4, 6, 7, 10, 0, -3];. */
+
+function verySmaller(array){
+  let smaller = 0;
+
+  for(let index in array){
+    if(array[index]<smaller){
+      smaller = index;
+    }
+  }
+  return smaller;
+}
+
+console.log(verySmaller([2, 4, 6, 7, 10, 0, -3]));
