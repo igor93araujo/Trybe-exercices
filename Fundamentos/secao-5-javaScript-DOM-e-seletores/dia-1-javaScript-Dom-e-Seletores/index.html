@@ -54,10 +54,10 @@
       5. Crie e execute uma função que modifique o texto da primeira tag <p> para maiúsculo.
       6. Crie e execute uma função que exiba o conteúdo de todas as tags <p> no console.
       */
-     function chanceP (text){
+     function changeP (text){
       document.getElementsByTagName('p')[1].innerText = text;
      }
-     chanceP("Trabalhando numa multinacional como desenvolvedor!");
+     changeP("Trabalhando numa multinacional como desenvolvedor!");
 
      function chanceColor(newColor){
       document.getElementsByClassName("main-content")[0].style.background = newColor; 
@@ -72,8 +72,14 @@
     function textCorrector(newText){
       document.getElementsByTagName("h1")[0].innerText = newText;
     }
-    textCorrector("Exercício - JavaScript")
+    textCorrector("Exercício - JavaScript");
 
+    function uppercaseFirstP(upper){
+      document.getElementsByTagName("p")[0].innerText = upper;
+    }
+    uppercaseFirstP("Texto padrão do nosso site".toUpperCase());
+
+    
     </script>
   </body>
 </html>
