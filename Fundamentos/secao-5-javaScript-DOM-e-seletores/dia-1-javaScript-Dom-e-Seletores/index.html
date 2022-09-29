@@ -79,6 +79,13 @@
     }
     uppercaseFirstP("Texto padrão do nosso site".toUpperCase());
 
+    function showAllP(){
+      let paragraphs = (document.getElementsByTagName("p"));
+      for(let index in paragraphs){
+        console.log (paragraphs[index].innerHTML);
+      }
+    }
+    showAllP();
     
     </script>
   </body>
