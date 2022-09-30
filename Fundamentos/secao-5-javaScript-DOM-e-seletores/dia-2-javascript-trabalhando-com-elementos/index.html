@@ -1,76 +1,88 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>Exercício</title>
-    <style>
-      section {
-        border-color: black;
-        border-style: solid;
-      }
 
-      .title {
-        text-align: center;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>Exercício</title>
+  <style>
+    section {
+      border-color: black;
+      border-style: solid;
+    }
 
-      .main-content {
-        background-color: yellow;
-      }
+    .title {
+      text-align: center;
+    }
 
-      .main-content .center-content {
-        background-color: red;
-        width: 50%;
-        margin-left: auto;
-        margin-right: auto;
-      }
+    .main-content {
+      background-color: yellow;
+    }
 
-      .main-content .center-content p {
-        font-style: italic;
-      }
+    .main-content .center-content {
+      background-color: red;
+      width: 50%;
+      margin-left: auto;
+      margin-right: auto;
+    }
 
-      .main-content .left-content {
-        background-color: green;
-        width: 60%;
-        margin-left: 0;
-        margin-right: auto;
-      }
+    .main-content .center-content p {
+      font-style: italic;
+    }
 
-      .main-content .left-content .small-image {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        border-radius: 100%;
-      }
+    .main-content .left-content {
+      background-color: green;
+      width: 60%;
+      margin-left: 0;
+      margin-right: auto;
+    }
 
-      .main-content .right-content {
-        background-color: blue;
-        width: 60%;
-        margin-left: auto;
-        margin-right: 0;
-      }
+    .main-content .left-content .small-image {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      border-radius: 100%;
+    }
 
-      .main-content .description {
-        text-align: center;
-      }
-    </style>
-  </head>
-  <body id="task">
+    .main-content .right-content {
+      background-color: blue;
+      width: 60%;
+      margin-left: auto;
+      margin-right: 0;
+    }
 
-    <script>
-      //Adicione a tag h1 com o texto Exercício - JavaScript DOM como filho da tag body;
-        let taskBody = document.getElementById("task"); // capturo o pai
-        let taskTitle = document.createElement('h1'); //crio a tag filho do pai
-        taskTitle.innerHTML = "Exercício - JavaScript DOM"; // adiciono valor a ela
-        taskBody.appendChild(taskTitle); //adc ela ao documento
-       
-      //Adicione a tag main com a classe main-content como filho da tag body;
-      let taskMain = document.createElement('main'); //crio tag filho
-      taskMain.className = "main-content"; //atribui uma classe a ela
-      taskBody.appendChild(taskMain); // adc ao documento
-      
-      
+    .main-content .description {
+      text-align: center;
+    }
+  </style>
+</head>
 
-    </script>
-  </body>
+<body id="task">
+
+  <script>
+    //Adicione a tag h1 com o texto Exercício - JavaScript DOM como filho da tag body;
+    
+    let taskBody = document.getElementById("task"); // capturo o pai
+    let taskTitle = document.createElement('h1'); //crio a tag filho do pai
+    taskTitle.innerHTML = "Exercício - JavaScript DOM"; // adiciono valor a ela
+    taskBody.appendChild(taskTitle); //adc ela ao documento
+
+    //Adicione a tag main com a classe main-content como filho da tag body;
+    let taskMain = document.createElement('main'); //crio tag filho
+    taskMain.className = "main-content"; //atribui uma classe a ela
+    taskBody.appendChild(taskMain); // adc ao documento
+
+    //Adicione a tag section com a classe center-content como filho da tag main 
+    //criada no passo 2;
+    let fatherMain = document.getElementsByClassName("main-content"); //pai
+    let tagSection = document.createElement('section'); //crio tag filho
+    tagSection.className = "center-content";
+    taskMain.appendChild(tagSection);
+
+
+
+
+  </script>
+</body>
+
 </html>
