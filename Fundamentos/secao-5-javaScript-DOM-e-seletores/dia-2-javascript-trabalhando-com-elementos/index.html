@@ -65,7 +65,7 @@
     let taskBody = document.getElementById("task"); // capturo o pai
     let taskTitle = document.createElement('h1'); //crio a tag filho do pai
     taskTitle.innerHTML = "Exercício - JavaScript DOM"; // adiciono valor a ela
-    taskTitle.className = "title";
+    taskTitle.className = "title"; //Adicione a classe title na tag h1 criada;
     taskBody.appendChild(taskTitle); //adc ela ao documento
 
     //Adicione a tag main com a classe main-content como filho da tag body;
@@ -115,9 +115,10 @@
     //Adicione 3 tags h3, todas sendo filhas do main criado no passo 2.
     
     for(let index = 0; index<3; index +=1){
-      let tagsh3 = document.createElement("h3");
+      let tagsh3 = document.createElement("h3");//Adicione a classe description nas 3 tags h3 criadas;
       taskMain.appendChild(tagsh3);
       tagsh3.innerHTML = index;
+      tagsh3.className = "description"; //
     }
     
 
