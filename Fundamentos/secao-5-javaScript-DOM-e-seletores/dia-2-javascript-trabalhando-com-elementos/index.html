@@ -65,6 +65,7 @@
     let taskBody = document.getElementById("task"); // capturo o pai
     let taskTitle = document.createElement('h1'); //crio a tag filho do pai
     taskTitle.innerHTML = "Exercício - JavaScript DOM"; // adiciono valor a ela
+    taskTitle.className = "title";
     taskBody.appendChild(taskTitle); //adc ela ao documento
 
     //Adicione a tag main com a classe main-content como filho da tag body;
@@ -74,12 +75,51 @@
 
     //Adicione a tag section com a classe center-content como filho da tag main 
     //criada no passo 2;
-    let fatherMain = document.getElementsByClassName("main-content"); //pai
     let tagSection = document.createElement('section'); //crio tag filho
-    tagSection.className = "center-content";
-    taskMain.appendChild(tagSection);
+    tagSection.className = "center-content"; //dar identificacao a classe
+    taskMain.appendChild(tagSection); //adc ao doc
 
+    //Adicione a tag p como filho do section criado no passo 3 e coloque algum texto;
+    let sonP = document.createElement('p'); // crio a tag filho
+    sonP.innerHTML = "Essa tag Ṕ é filha de section center";
+    tagSection.appendChild(sonP);
 
+    //Adicione a tag section com a classe left-content como filho da tag main criada no passo 2;
+    let leftTag = document.createElement('section');
+    leftTag.className = "left-content";
+    tagSection.appendChild(leftTag);
+
+    //Adicione a tag section com a classe right-content como filho da tag main criada no passo 2;
+    let rightTag = document.createElement('section');
+    rightTag.className = "right-content";
+    tagSection.appendChild(rightTag);
+
+    //Adicione uma imagem com src configurado para o valor https://picsum.photos/200 e classe small-image. Esse elemento deve ser filho do section criado no passo 5;
+    let leftImage = document.createElement('img');
+    leftImage.className = "small-image";
+    leftImage.src = "https://picsum.photos/200";
+    leftTag.appendChild(leftImage);
+
+    //Adicione uma lista não ordenada com os valores de 1 a 10 por extenso, ou seja, um, dois, três, … como valores da lista. Essa lista deve ser filha do section criado no passo 6;
+
+    let nonOrderedList=document.createElement('ul');
+    rightTag.appendChild(nonOrderedList);
+    
+    let arrayOfNumber = ['um','dois','três','quatro', 'cinco','seis','sete','oito','nove','dez'];
+
+    for (let index in arrayOfNumber){
+     let elementLi = document.createElement('li');
+     elementLi.innerHTML = arrayOfNumber[index];
+      nonOrderedList.appendChild(elementLi);
+    }
+    //Adicione 3 tags h3, todas sendo filhas do main criado no passo 2.
+    
+    for(let index = 0; index<3; index +=1){
+      let tagsh3 = document.createElement("h3");
+      taskMain.appendChild(tagsh3);
+      tagsh3.innerHTML = index;
+    }
+    
 
 
   </script>
