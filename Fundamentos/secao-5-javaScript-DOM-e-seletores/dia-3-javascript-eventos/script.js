@@ -18,16 +18,16 @@ function createDaysOfTheMonth() {
   let daysUl = document.getElementById('days'); // captura do elemento pai
 
   for (let index = 0; index < decemberDaysList.length; index += 1) {
-    
+
     let monthDay = decemberDaysList[index]; //para cada volta, ele pega um dia;
     let dayItem = document.createElement('li'); // para cada volta, ele cria um li
     dayItem.innerHTML = monthDay//para cada volta ele acrescenta o dia na li
     daysUl.appendChild(dayItem); // pra cada volta, ele acrescenta a li com o dia dentro do pai
 
-    if(monthDay === 24 || monthDay === 25 || monthDay === 31){ //condição para os dias excessao e classes
-      dayItem.className = 'day holiday';
-    } else if (monthDay === 4 || monthDay === 11 || monthDay === 18 || monthDay === 25){
-      dayItem.className = 'day friday';
+    if (monthDay === 24 || monthDay === 25 || monthDay === 31) { //condição para os dias excessao e classes
+      dayItem.className = 'holiday';
+    } else if (monthDay === 4 || monthDay === 11 || monthDay === 18 || monthDay === 25) {
+      dayItem.className = 'friday';
     } else {
       dayItem.className = 'day';
     }
@@ -35,7 +35,7 @@ function createDaysOfTheMonth() {
 }
 createDaysOfTheMonth();
 
-function createButton(){
+function createButton() {
   let buttonsConteiner = document.querySelector(".buttons-container"); //pega o pai
   let newButton = document.createElement('button'); // cria o botao com um nome
   newButton.id = "btn-holiday" // dá ID ao botao
@@ -43,3 +43,27 @@ function createButton(){
   buttonsConteiner.appendChild(newButton); // adc o botao ao pai. 
 }
 createButton()
+
+let buttonHoliday = document.getElementById("btn-holiday"); //armazona o de foco
+let holidays = document.getElementsByClassName("holiday");
+
+
+buttonHoliday.addEventListener("mouseover", changeBackground);
+buttonHoliday.addEventListener("mouseout", resetColor);
+
+function changeBackground() {
+  for(let index in holidays){
+    console.log("clicou");
+    holidays[index].style.backgroundColor = "green";
+    holidays[index].style.color = "white";
+  }
+}
+
+function resetColor(){
+  for(let index in holidays){
+    holidays[index].style.backgroundColor = 'rgb(238,238,238)';
+    holidays[index].style.color = "grey";
+  }
+}
+
+
