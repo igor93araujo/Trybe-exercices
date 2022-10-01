@@ -66,4 +66,13 @@ function resetColor(){
   }
 }
 
+function fridayButton(){
+  let buttonsConteiner = document.querySelector(".buttons-container"); //pega o pai
+  let fridayBtn = document.createElement('button'); // cria o botao com um nome
+  fridayBtn.id = 'btn-friday';
+  fridayBtn.innerHTML = 'Sexta-feira';
+  buttonsConteiner.appendChild(fridayBtn);
+}
+fridayButton()
+
 
