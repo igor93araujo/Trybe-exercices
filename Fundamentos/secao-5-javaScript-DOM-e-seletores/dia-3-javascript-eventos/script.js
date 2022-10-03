@@ -1,3 +1,8 @@
+//variáveis globais
+let daysUl = document.getElementById('days')
+
+
+
 function createDaysOfTheWeek() {
   const weekDays = ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado']
   const weekDaysList = document.querySelector('.week-days');
@@ -17,7 +22,7 @@ createDaysOfTheWeek();
 const decemberDaysList = [29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];
 
 function createDaysOfTheMonth() {
-  let daysUl = document.getElementById('days'); // captura do elemento pai
+; // captura do elemento pai
 
   for (let index = 0; index < decemberDaysList.length; index += 1) {
 
@@ -57,7 +62,7 @@ let holidays = document.getElementsByClassName("holiday");
 
 buttonHoliday.addEventListener("click", changeBackground);
 
-let newColor = "green";
+let newColor = "rgb(229, 246, 186)";
 let oldColor = "rgb(237, 237, 237)";
 
 function changeBackground() {
@@ -84,7 +89,7 @@ fridayButton();
 let fridayBtn = document.getElementById('btn-friday');
 let friday = document.getElementsByClassName('friday');
 
-fridayBtn.addEventListener("click", function(changeFriday){
+fridayBtn.addEventListener("click", function(){
   
   let day = [4,11,18,25];
   let change = "sextô";
@@ -97,6 +102,32 @@ fridayBtn.addEventListener("click", function(changeFriday){
       }
     }
 });
+
+// Função zoom nos botoes
+
+let ulDays = document.getElementById('days'); // captura do elemento pai
+let pattern = '20px';
+
+function zoomIn(){
+  ulDays.addEventListener("mouseover", function(event){
+    event.target.style.fontSize = '30px';
+    event.target.style.fontWeight = '200';
+  });
+}
+
+function zoomOut(){
+  ulDays.addEventListener("mouseout", function(event){
+    event.target.style.fontSize = pattern;
+    event.target.style.fontWeight = 0;
+  })
+}
+
+zoomIn()
+zoomOut()
+
+
+
+
 
 
 
