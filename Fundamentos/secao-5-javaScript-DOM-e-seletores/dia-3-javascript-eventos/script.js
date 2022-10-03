@@ -168,7 +168,30 @@ selectTask();
     });
   }
   colorDayTask();
- 
+  
+
+  let getTaskInput = document.getElementById('task-input');
+  let getAddButton = document.getElementById('btn-add');
+
+  getAddButton.addEventListener('click', addToList);
+  getAddButton.accessKey('enter', addToList);
+
+  function addToList(){
+    let getInputConteiner = document.querySelector('.input-container');
+
+    if(getTaskInput.value === '' ){
+      alert('Adicione um item a lista!');
+    } else {
+      let newLi = document.createElement('li')
+      getInputConteiner.appendChild(newLi);
+      newLi.innerHTML = getTaskInput.value;
+    }
+  }
+  addToList()
+
+
+
+
 
 
 
