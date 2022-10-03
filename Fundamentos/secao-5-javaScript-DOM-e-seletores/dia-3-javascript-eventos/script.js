@@ -128,7 +128,16 @@ function createTasts(task){
   tagSpan.innerHTML = task;
   getMyTasks.appendChild(tagSpan);
 }
-createTasts("Assistir a aula")
+createTasts("Assistir a aula");
+
+function colorTask(color){
+  getMyTasks = document.querySelector('.my-tasks'); //pai
+  let colorMark = document.createElement('div');
+  colorMark.className = 'task';
+  colorMark.style.backgroundColor = color;
+  getMyTasks.appendChild(colorMark)
+}
+colorTask('rgb(156, 245, 168)');
 
 
 
