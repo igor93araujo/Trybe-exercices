@@ -86,18 +86,18 @@ fridayButton();
 let fridayBtn = document.getElementById('btn-friday');
 let friday = document.getElementsByClassName('friday');
 
-fridayBtn.addEventListener("click", function(){
-  
-  let day = [4,11,18,25];
+fridayBtn.addEventListener("click", function () {
+
+  let day = [4, 11, 18, 25];
   let change = "sextô";
 
-    for (let index = 0; index<friday.length; index +=1){
-      if (friday[index].innerHTML !== change) {
-        friday[index].innerHTML = change;
-      } else {
-        friday[index].innerHTML = day[index];
-      }
+  for (let index = 0; index < friday.length; index += 1) {
+    if (friday[index].innerHTML !== change) {
+      friday[index].innerHTML = change;
+    } else {
+      friday[index].innerHTML = day[index];
     }
+  }
 });
 
 // Função zoom nos botoes
@@ -105,15 +105,15 @@ fridayBtn.addEventListener("click", function(){
 let ulDays = document.getElementById('days'); // captura do elemento pai
 let pattern = '20px';
 
-function zoomIn(){
-  ulDays.addEventListener("mouseover", function(event){
+function zoomIn() {
+  ulDays.addEventListener("mouseover", function (event) {
     event.target.style.fontSize = '30px';
     event.target.style.fontWeight = '200';
   });
 }
 
-function zoomOut(){
-  ulDays.addEventListener("mouseout", function(event){
+function zoomOut() {
+  ulDays.addEventListener("mouseout", function (event) {
     event.target.style.fontSize = pattern;
     event.target.style.fontWeight = 0;
   })
@@ -122,7 +122,7 @@ function zoomOut(){
 zoomIn()
 zoomOut()
 
-function createTasts(task){
+function createTasts(task) {
   getMyTasks = document.querySelector('.my-tasks'); //pai
   let tagSpan = document.createElement('span');
   tagSpan.innerHTML = task;
@@ -130,7 +130,7 @@ function createTasts(task){
 }
 createTasts("Assistir a aula");
 
-function colorTask(color){
+function colorTask(color) {
   getMyTasks = document.querySelector('.my-tasks'); //pai
   let colorMark = document.createElement('div');
   colorMark.className = 'task';
@@ -138,6 +138,20 @@ function colorTask(color){
   getMyTasks.appendChild(colorMark)
 }
 colorTask('rgb(156, 245, 168)');
+
+
+let getDiv = document.querySelector('.task');
+
+getDiv.addEventListener("click", selectTask);
+
+function selectTask() {
+  if(getDiv.className === 'task'){
+    getDiv.className = 'task selected';
+  } else {
+    getDiv.className = 'task'
+  }
+}
+selectTask();
 
 
 
