@@ -12,6 +12,8 @@ function createDaysOfTheWeek() {
 }
 createDaysOfTheWeek();
 
+//criação dias:
+
 const decemberDaysList = [29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];
 
 function createDaysOfTheMonth() {
@@ -24,16 +26,21 @@ function createDaysOfTheMonth() {
     dayItem.innerHTML = monthDay//para cada volta ele acrescenta o dia na li
     daysUl.appendChild(dayItem); // pra cada volta, ele acrescenta a li com o dia dentro do pai
 
-    if (monthDay === 24 || monthDay === 25 || monthDay === 31) { //condição para os dias excessao e classes
+    if (monthDay === 24 || monthDay === 31) { //condição para os dias excessao e classes
       dayItem.className = 'holiday';
-    } else if (monthDay === 4 || monthDay === 11 || monthDay === 18 || monthDay === 25) {
+    } else if (monthDay === 4 || monthDay === 11 || monthDay === 18) {
       dayItem.className = 'friday';
+    } else if (monthDay === 25) {
+      dayItem.className = 'holiday' + ' ' + 'friday'; // adiciona duas classes no item.
     } else {
       dayItem.className = 'day';
     }
   }
 }
 createDaysOfTheMonth();
+
+
+//botao feriados:
 
 function createButton() {
   let buttonsConteiner = document.querySelector(".buttons-container"); //pega o pai
@@ -48,31 +55,51 @@ let buttonHoliday = document.getElementById("btn-holiday"); //armazona o de foco
 let holidays = document.getElementsByClassName("holiday");
 
 
-buttonHoliday.addEventListener("mouseover", changeBackground);
-buttonHoliday.addEventListener("mouseout", resetColor);
+buttonHoliday.addEventListener("click", changeBackground);
+
+let newColor = "green";
+let oldColor = "rgb(237, 237, 237)";
 
 function changeBackground() {
-  for(let index in holidays){
-    console.log("clicou");
-    holidays[index].style.backgroundColor = "green";
-    holidays[index].style.color = "white";
+  for (let index in holidays) {
+    if (holidays[index].style.backgroundColor === oldColor) {
+      holidays[index].style.backgroundColor = newColor;
+    } else {
+      holidays[index].style.backgroundColor = oldColor;
+    }
   }
 }
 
-function resetColor(){
-  for(let index in holidays){
-    holidays[index].style.backgroundColor = 'rgb(238,238,238)';
-    holidays[index].style.color = "grey";
-  }
-}
+//botao friday:
 
-function fridayButton(){
+function fridayButton() {
   let buttonsConteiner = document.querySelector(".buttons-container"); //pega o pai
   let fridayBtn = document.createElement('button'); // cria o botao com um nome
   fridayBtn.id = 'btn-friday';
   fridayBtn.innerHTML = 'Sexta-feira';
   buttonsConteiner.appendChild(fridayBtn);
 }
-fridayButton()
+fridayButton();
+
+let fridayBtn = document.getElementById('btn-friday');
+let friday = document.getElementsByClassName('friday');
+
+fridayBtn.addEventListener("click", function(changeFriday){
+  
+  let day = [4,11,18,25];
+  let change = "sextô";
+
+    for (let index = 0; index<friday.length; index +=1){
+      if (friday[index].innerHTML !== change) {
+        friday[index].innerHTML = change;
+      } else {
+        friday[index].innerHTML = day[index];
+      }
+    }
+});
+
+
+
+
 
 
