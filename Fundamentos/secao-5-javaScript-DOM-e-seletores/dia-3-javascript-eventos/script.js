@@ -153,6 +153,23 @@ function selectTask() {
 }
 selectTask();
 
+  ulDays = document.getElementById('days'); // captura do elemento pai
+
+  function colorDayTask(){
+    let changedColor = 'rgb(156, 245, 168)'; //verde
+    let originalColor = 'rgb(237, 237, 237)'; //cinza
+
+    ulDays.addEventListener('click', function(event){
+      if(event.target.style.backgroundColor === changedColor){
+        event.target.style.backgroundColor = originalColor;
+      } else{
+        event.target.style.backgroundColor = changedColor;
+      }
+    });
+  }
+  colorDayTask();
+ 
+
 
 
 
