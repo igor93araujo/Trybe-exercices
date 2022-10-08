@@ -86,12 +86,12 @@ fridayButton();
 let fridayBtn = document.getElementById('btn-friday');
 let friday = document.getElementsByClassName('friday');
 
-fridayBtn.addEventListener("click", function () {
+fridayBtn.addEventListener("click", function (){
 
   let day = [4, 11, 18, 25];
   let change = "sextô";
 
-  for (let index = 0; index < friday.length; index += 1) {
+  for (let index in friday) {
     if (friday[index].innerHTML !== change) {
       friday[index].innerHTML = change;
     } else {
@@ -106,7 +106,7 @@ let ulDays = document.getElementById('days'); // captura do elemento pai
 let pattern = '20px';
 
 function zoomIn() {
-  ulDays.addEventListener("mouseover", function (event) {
+  ulDays.addEventListener("mouseover", function(event) {
     event.target.style.fontSize = '30px';
     event.target.style.fontWeight = '200';
   });

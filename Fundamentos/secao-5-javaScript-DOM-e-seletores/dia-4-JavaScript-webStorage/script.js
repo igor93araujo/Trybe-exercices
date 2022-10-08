@@ -2,27 +2,27 @@
 let getBody = document.getElementById('fullPage');
 let getBanner = document.querySelector('.banner');
 let text = document.querySelector('#Inner');
+let textColorBotton = document.createElement('button');
+getBanner.appendChild(textColorBotton);
 
 //Cor de fundo da tela
 
-let ColorButton = document.createElement('button');
-getBanner.appendChild(ColorButton);
-ColorButton.innerHTML = "Trocar cor de fundo";
 
-ColorButton.addEventListener("click", changeBackgroundColor);
+textColorBotton.innerHTML = "Trocar cor de fundo";
+textColorBotton.addEventListener("click", changeBackgroundColor);
+//getBody.style.backgroundColor = 'white';
 
 function changeBackgroundColor() {
 
-  let r = Math.floor(Math.random() * 256);
-  let g = Math.floor(Math.random() * 256);
-  let b = Math.floor(Math.random() * 256);
-  let color = `rgb(${r},${g},${b})`;
+  let color = 'red';
+  let newBkgColor = 'blue';
 
-  if (getBody.style.backgroundColor != color) {
+  if (getBody.style.backgroundColor == newBkgColor) {
     getBody.style.backgroundColor = color;
   } else {
-    getBody.style.backgroundColor = color
+    getBody.style.backgroundColor = newBkgColor;
   }
+  localStorage.setItem("backgroundColor", getBody.style.backgroundColor);
 }
 
 //Cor do texto;
@@ -33,11 +33,17 @@ textColorButton.innerHTML = "Trocar cor do texto";
 textColorButton.addEventListener("click", changeTextColor);
 
 function changeTextColor() {
-  let r = Math.floor(Math.random() * 256);
+ /*let r = Math.floor(Math.random() * 256);
   let g = Math.floor(Math.random() * 256);
   let b = Math.floor(Math.random() * 256);
-  let textColor = `rgb(${r},${g},${b})`;
-  text.style.color = textColor;
+  let textColor = `rgb(${r},${g},${b})`; */
+
+  if (text.style.color === 'white') {
+    text.style.color = 'black';
+  } else {
+    text.style.color = 'white';
+  }
+  localStorage.setItem('textColor', text.style.color);
 }
 
 //Tamanho da fonte;
@@ -107,12 +113,12 @@ let fontFamilyButton = document.createElement('button');
 getBanner.appendChild(fontFamilyButton);
 fontFamilyButton.innerHTML = "Alterar Fonte";
 
-fontFamilyButton.addEventListener("click",changeFontFamily);
+fontFamilyButton.addEventListener("click", changeFontFamily);
 
-function changeFontFamily(){
-  let fontType = ["Arial", "Verdana", "Helvetica","Courier New", "Gill Sans", "Comfortaa"];
+function changeFontFamily() {
+  let fontType = ["Arial", "Verdana", "Helvetica", "Courier New", "Gill Sans", "Comfortaa"];
   let num;
-  num = Math.floor(Math.random()*6);
+  num = Math.floor(Math.random() * 6);
   text.style.fontFamily = fontType[num];
 }
 
