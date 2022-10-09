@@ -18,7 +18,7 @@ function cancelSendButton(event){ //função de preventDefault
 verifyAcess( */
 sendButton.addEventListener('click', verifyData);
 
-function verifyData(){
+/* function verifyData(){
   const nameSize = document.getElementById('nome').value.length;
   const emailSize = document.getElementById('email').value.length;
   const textAreaSize = document.getElementById('textarea').value.length;
@@ -28,7 +28,7 @@ function verifyData(){
     alert('Dados enviados com sucesso! Obrigado por participar do concurso TrybeTrip.');
   }
 }
-verifyData();
+verifyData(); */
  
 
 
