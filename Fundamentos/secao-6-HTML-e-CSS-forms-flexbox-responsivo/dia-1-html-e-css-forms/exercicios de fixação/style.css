@@ -1,0 +1,25 @@
+#form{
+  border: 3px solid black;
+  width: 90%;
+  margin: 10px;
+  padding: 20px;
+}
+
+#buttons{
+  margin: 10px;
+  padding: 10px;
+  
+}
+
+.bt{
+  width: 150px;
+  height: 30px;
+  border-radius: 15%;
+  background-color: white;
+  margin-right: 10px;
+}
+
+.clbt{
+  background-color: white;
+  margin-left: 50px;
+}

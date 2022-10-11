@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Forms - Trybe Trip</title>
+</head>
+<header>
+  <h1>Trybe Trip</h1>
+</header>
+<body >
+  <section id="form">
+    <form action="" method="get">
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" name="name" minlength="10" maxlength="40" required>
+      <br>
+      <br>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="e-mail" minlength="10" maxlength="50" required>
+      <br>
+      <br>
+      <input type="radio" name="options" id="opcao1">
+      <label for="opcao1">Cidade</label>
+      <input type="radio" name="options" id="opcao2">
+      <label for="opcao2">Campo</label>
+      <input type="radio" name="options" id="opcao3">
+      <label for="opcao3">Praia</label>
+      <input type="radio" name="options" id="opcao4">
+      <label for="opcao4'">Montanhas</label>
+      <br>
+      <br>
+      <label for="box">Espaço para digitar a resposta:</label>
+      <br>
+      <br>
+      <textarea name="resposta" id="textarea" cols="35" rows="10" maxlength="500"></textarea>
+      <br>
+      <br>
+      <label for="data">Data:</label>
+      <input type="date" name="dataDaViagem" id="data">
+      <br>
+      <br>
+      <label for="concordo1">Gostaria de receber outras incríveis oportunidades oferecidas pela Trybe?</label>
+      <input type="checkbox" name="conc1" id="concordo1" >
+      <br>
+      <label for="concordo2">Concordo que imagens das minhas férias poderão ser usadas na divulgação de concursos futuros.</label>
+      <input type="checkbox" name="conc2" id="concordo2">
+  </section>
+  <section id="buttons">
+    <button type="submit" class="bt" id="enviar">Enviar</button>
+    <button type="submit" class="bt" id="apagar">Apagar</button>
+  </section>
+</form>
+<script src="script.js"></script>
+</body>
+</html>
