@@ -1,44 +1,67 @@
-body{
-  margin: 100px;
+ *{
+  box-sizing: border-box;
+ }
+
+ body{
   background-image: url(./pexels-valentin-antonucci-691637.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   color: azure;
   font-weight:bolder;
+  display:grid;
+  justify-content: center;
+  align-items: center;
 }
 .display-1{
   text-align: center;
 }
-input{
-  width: 50%;
+
+h1{
+  text-shadow: 2px 2px green;
 }
+
 #form{
-  width: 50%;
-  margin-left: 27%;
+
+  margin-left: auto;
   padding: 20px;
   color: azure;
-  background-color: ;
-}
-
-.checkBoxes{
-  width: 100%;
+  background-color:rgba(0,0,0,0.3);
+  border-radius: 10px;
+  box-shadow: 0 0 16px 0 rgba(0,0,0,0.4);
 
 }
 
-/* .checkContent{
-  margin-left: 20%;
-} */
-
+textarea{
+  width: 60%;
+  resize: none;
+}
+ 
 #buttons{
-  margin: 10px;
-  padding: 10px;
-  margin-left: 40%;
+display: flex;
+justify-content: center;
+align-items: center;
+margin-top: 10px;
+margin-bottom: 50px;
   
-}
+} 
+
 
 button{
   width: 200px;
   margin-right: 50px;
+}
+
+
+#enviar{
+  background-color: green;
+}
+
+#apagar{
+  background-color: red;
+}
+
+#enviar:disabled{
+
 }
 
 .bt{
@@ -53,3 +76,4 @@ button{
   background-color: white;
   margin-left: 50px;
 }
+

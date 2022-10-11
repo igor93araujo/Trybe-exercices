@@ -1,4 +1,4 @@
-f<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -9,12 +9,12 @@ f<!DOCTYPE html>
   <title>Forms - Trybe Trip</title>
 </head>
 <header>
-  <h1 class="display-1">Trybe Trip</h1>
 </header>
 <body>
   <section id="form" class="bg-success.bg-gradient">
+    <h1 class="display-1">Trybe Trip</h1>
     <form action="" method="get">
-      <label for="nome">Nome:</label>
+      <label for="nome" class="label">Nome:</label>
       <input type="text" id="nome" name="name" minlength="10" maxlength="40" class="shadow-sm p-3 mb-5 bg-body rounded"required>
       <br>
       <br>
@@ -45,14 +45,15 @@ f<!DOCTYPE html>
       <section class = 'checkBoxes'>
         <label for="concordo1" class="checkContent">Gostaria de receber outras incríveis oportunidades oferecidas pela Trybe?</label>
         <input type="checkbox" name="conc1" id="concordo1" >
+        <br>
         <label for="concordo2" class="checkContent">Concordo que imagens das minhas férias poderão ser usadas na divulgação de concursos futuros.</label>
         <input type="checkbox" name="conc2" id="concordo2">
       </section>
+    </section>
   </section>
   <section id="buttons">
-    <button type="submit" class="btn btn-success" id="enviar">Enviar</button>
-    <button type="submit" class="btn btn-danger" id="apagar">Apagar</button>
-  </section>
+  <button type="submit"  id="enviar" >Enviar</button>
+  <button type="submit"  id="apagar">Apagar</button>
 </form>
 <script src="script.js"></script>
 </body>
