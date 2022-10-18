@@ -1,0 +1,10 @@
+#number{
+  margin-left: 40px ;
+  font-size: 100px;
+}
+
+body{
+  border: 1px solid black;
+  width: fit-content;
+  border-radius: 10px;
+}
