@@ -34,8 +34,9 @@ const order = {
   },
 };
 
+// Exiba a mensagem desejada utilizando `template literals`
+
  const customerInfo = (order) => {
-  const address = 'address';
   const deliveryPerson = order.order.delivery.deliveryPerson;
   const customerName = order.name;
   const customerPhone = order.phoneNumber;
@@ -43,13 +44,13 @@ const order = {
   const number = order.address.number;
   const apartment = order.address.apartment;
 
-  console.log(`Olá ${deliveryPerson}, entrega para: ${customerName}, Telefone: ${customerPhone}, R. ${street}, Nº: ${number}, AP: ${apartment}`); // Exiba a mensagem desejada utilizando `template literals`
+  console.log(`Olá ${deliveryPerson}, entrega para: ${customerName}, Telefone: ${customerPhone}, R. ${street}, Nº: ${number}, AP: ${apartment}.`); 
 }
 
 customerInfo(order); 
 /* ------------------------------------------------------------------------------ */
 const orderModifier = (order) => {
-  order.order.delivery.deliveryPerson = 'Luiz Silva';
+  order.name= 'Luiz Silva';
   order.payment.total = 50;
 
   console.log(`Olá ${order.order.delivery.deliveryPerson}, o total do seu pedido de ${Object.keys(order.order.pizza)} e ${order.order.drinks.coke.type} é R$ ${order.payment.total},00.`);

@@ -19,10 +19,6 @@ const lesson3 = {
   turno: 'noite',
 };
 
-let newObject = Object.assign({},lesson1,lesson2,lesson3);
-
-console.log(newObject);
-
 /* Usando o objeto criado no tópico anterior, crie uma função que retorne o número total de estudantes em todas as aulas. */
 
 function somaEstudantes (){
@@ -69,8 +65,11 @@ console.log(newObject);
 
 /* Usando o objeto criado no tópico anterior, crie uma função que retorne o número total de estudantes em todas as aulas. */
 
-/* function somaEstudantes (){
+function somaEstudantes (){
   let soma = newObject.lesson1.numeroEstudantes + newObject.lesson2.numeroEstudantes + newObject.lesson3.numeroEstudantes;
   return soma;
 }
-console.log(somaEstudantes()); */
+console.log(somaEstudantes());
+
+/* Crie uma função que verifique se o par (chave / valor) existe na função. Essa função deve possuir três parâmetros, sendo eles: o objeto, o nome da chave e o valor da chave. Exemplo: */
+
