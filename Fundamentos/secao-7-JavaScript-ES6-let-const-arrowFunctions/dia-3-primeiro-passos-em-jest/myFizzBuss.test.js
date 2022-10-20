@@ -1,6 +1,6 @@
 const myFizzBuzz = require('./sum');
 
-describe('Verificações função fizzBuzz', () => {
+describe('Testa função fizzBuzz', () => {
   /* Faça uma chamada com um número divisível por 3 e 5 e verifique se o retorno é o esperado */
   it('Verifica se um numero divisivel por 3 e 5 retorna "fizzbuzz".', () => {
     expect(myFizzBuzz(15)).toBe('fizzbuzz');

@@ -4,7 +4,7 @@ function sum(a, b) {
   }
   return a + b;
 }
-
+/* ---------------------------------------- */
 function myRemove(arr, item) {
   let newArr = [];
   for (let index = 0; index < arr.length; index += 1) {
@@ -14,7 +14,7 @@ function myRemove(arr, item) {
   }
   return newArr;
 }
-
+/* ---------------------------------------- */
 function myFizzBuzz(num) {
   if (typeof num !== 'number') return false;
   if (num % 3 === 0 && num % 5 === 0) return 'fizzbuzz';
@@ -23,11 +23,44 @@ function myFizzBuzz(num) {
   return num;
 }
 
-// implemente seus testes aqui
+/* ---------------------------------------- */
+const vogais = ['a', 'e', 'i', 'o', 'u'];
+const code = [1, 2, 3, 4, 5];
 
-// implemente seus testes aqui
+function encode(text) {
+  const caracters = text.split('');
+  caracters.forEach((letra, i) => {
+    vogais.forEach((vogal, k) => {
+      caracters[i] = (letra === vogal) ? code[k] : caracters[i];
+    });
+  });
 
+  return caracters.join('');
+}
+
+function decode(text) {
+  const caracters = text.split('');
+  caracters.forEach((caracter, i) => {
+    code.forEach((num, k) => {
+      caracters[i] = (caracter === num.toString()) ? vogais[k] : caracters[i];
+    });
+  });
+
+  return caracters.join('');
+}
+
+function techList(array, string) {
+  if (array.length === 0) {
+    return 'Vazio!';
+  }
+  let orderedArray = array.sort();
+  let objects = [];
+  for (let index in orderedArray) {
+    let result = { tech: orderedArray[index], name: string };
+    objects.push(result);
+  }
+  return objects;
+}
+/* ---------------------------------------- */
 /* Exportações: */
-module.exports = sum;
-module.exports = myRemove;
-module.exports = myFizzBuzz;
+module.exports = {sum, myRemove,myFizzBuzz,encode, decode};
