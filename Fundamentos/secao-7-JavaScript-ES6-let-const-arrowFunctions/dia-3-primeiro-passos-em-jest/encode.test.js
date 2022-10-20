@@ -21,6 +21,6 @@ describe('Verificações de funções encode e decode', () => {
   });
   /* Teste se a string que é retornada pelas funções tem o mesmo número de caracteres que a string passada como parâmetro. */
   it('Verifica se a string tem o mesmo tamanho do parametro', () => {
-    expect(encode('test'.length)).toEqual('t2st'.length);
-  })
+    expect(encode('test').length).toEqual(4);
+  });
 });
