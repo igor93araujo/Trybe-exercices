@@ -10,7 +10,7 @@ passwordBtnEl.addEventListener('click', () => {
   displayPasswordEl.innerHTML = randomPassword;
 });
 
-displayPasswordEl.addEventListener('click', async (event) => {
-  await copy(event.target.innerHTML);
+displayPasswordEl.addEventListener('click', () => {
+  copy(displayPasswordEl.innerHTML);
   alert('Senha copiada!');
 });

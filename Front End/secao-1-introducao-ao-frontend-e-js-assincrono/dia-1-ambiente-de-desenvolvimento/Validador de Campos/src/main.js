@@ -5,7 +5,7 @@ const inputEl = document.querySelector('#value');
 const selectEls = document.querySelector('#option');
 const pEl = document.querySelector('#answer');
 
-buttonEl.addEventListener('click', (event) => {
+buttonEl.addEventListener( 'click', (event) => {
   event.preventDefault();
   const UUID_VERSION = 4;
   const campos = {
