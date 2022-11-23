@@ -1,5 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
+import Image from './Image.js';
+import cat from './cat-2083492_1280.jpg'
 
 function App() {
   return (
@@ -17,6 +19,7 @@ function App() {
         >
           Learn React
         </a>
+        <Image source = { cat } alternativeText = "Cute cat staring"/>
       </header>
     </div>
   );
