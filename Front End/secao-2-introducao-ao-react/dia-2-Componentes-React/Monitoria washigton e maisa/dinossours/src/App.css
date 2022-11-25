@@ -1,0 +1,28 @@
+.App {
+  text-align: center;
+}
+.App-header {
+  background-color: rgba(6, 61, 6, 0.904);
+  display: flex;
+}
+
+li {
+  list-style: none;
+}
+
+.liHeader {
+  display: flex;
+  border: 1px soldi grey;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content:center;
+  align-items: center;
+  gap: 50px;
+}
+
+img {
+  width: 70px;
+}
