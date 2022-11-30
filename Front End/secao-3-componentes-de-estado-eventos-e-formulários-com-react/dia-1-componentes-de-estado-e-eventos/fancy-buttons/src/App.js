@@ -4,11 +4,7 @@ import './App.css';
 class App extends React.Component {
   constructor() {
     super();
-
-    this.exibeConsole1 = this.exibeConsole1.bind(this);
-    this.exibeConsole2 = this.exibeConsole2.bind(this);
-    this.exibeConsole3 = this.exibeConsole3.bind(this);
-
+    
     this.state = {
       clicaBtn1: 0,
       clicaBtn2: 0,
@@ -49,7 +45,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <button onClick={this.exibeConsole1}>botao1</button>
+        <button onClick={this.exibeConsole1}>{this.state.clicaBtn1}</button>
         <button onClick={this.exibeConsole2}>botao2</button>
         <button onClick={this.exibeConsole3}>botao3</button>
       </div>
