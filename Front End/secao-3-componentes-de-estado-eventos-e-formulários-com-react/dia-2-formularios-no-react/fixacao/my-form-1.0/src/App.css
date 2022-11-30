@@ -2,6 +2,11 @@
   text-align: center;
 }
 
+.formulario {
+  margin: 20%;
+  width: fit-content;
+}
+
 form {
   display: flex;
   flex-direction: column;

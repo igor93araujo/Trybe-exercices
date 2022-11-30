@@ -3,51 +3,79 @@ import '../App.css'
 
 class MyForm extends React.Component {
 
-  constructor () {
-    super ();
+  constructor() {
+    super();
 
-    this.handleName = this.handleName.bind(this);
- 
+    this.handleChange = this.handleChange.bind(this);
+
     this.state = {
+      selectState: '',
       nameState: '',
+      emailState: '',
+      textAreaState: '',
+      checkboxState: false,
     }
   }
 
 
-  handleName(event) {
+  handleChange({ target }) {
+    const { name } = target;
+    const value = target.type === 'checkbox' ? target.checked : target.value;
+    // Exclusivamente no checkbox precisa fazer essa validação acima:
+
     this.setState({
-      nameState: event.target.value,
+      [name]: value
     })
   }
 
   render() {
     return (
-      <div>
+      <fieldset className='formulario'>
+        <legend>Meu formulário</legend>
         <form>
           <label>
             Select:
-            <select>
-              <option value="">Option 1</option>
-              <option value="">Option 2</option>
+            <select
+              name='selectState'
+              value={ this.state.selectState }
+              onChange={ this.handleChange }
+            >
+              <option value="Option 1">Option 1</option>
+              <option value="Option 2">Option 2</option>
             </select>
           </label>
           <label>
             Inputs:
             <input
               type="text"
-              name="name"
-              id="name"
+              name="nameState"
               placeholder='name'
-              value={this.state.nameState}
-              onChange={this.handleName} />
-            <input type="email" name="email" id="" placeholder='email' />
+              value={ this.state.nameState}
+              onChange={this.handleChange} />
+            <input
+            type="email"
+            name="emailState"
+            placeholder='email'
+            value={ this.state.emailState}
+            onChange={ this.handleChange }
+            />
           </label>
           <label >
             Text Area:
-            <textarea name="" id="" cols="30" rows="10"></textarea>
+            <textarea
+            type="text"
+            name="textAreaState"
+            value={ this.state.textAreaState }
+            onChange={ this.handleChange }></textarea>
+          </label>
+          <label>
+            Concorda com os termos?
+            <input type="checkbox" name="checkboxState" id=""
+            value={ this.state.checkboxState}
+            onChange={this.handleChange}/>
           </label>
         </form>
-      </div >
+      </fieldset >
     )
   }
 }
